@@ -20,7 +20,77 @@
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(circle at 20% 20%, #e8f1ff 0, transparent 25%),
+    radial-gradient(circle at 80% 0%, #ffe9f3 0, transparent 25%),
+    radial-gradient(circle at 50% 80%, #f0fff5 0, transparent 30%),
+    #f8fafc;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 16px 60px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: linear-gradient(120deg, #2563eb, #a855f7);
+  color: #fff;
+}
+
+.fade-card {
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.fade-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.14);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 500ms ease, transform 600ms ease, box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-blob {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, 0.16), transparent 35%),
+    radial-gradient(circle at 75% 25%, rgba(168, 85, 247, 0.14), transparent 28%),
+    radial-gradient(circle at 60% 80%, rgba(16, 185, 129, 0.14), transparent 32%);
+  filter: blur(60px);
+  opacity: 0.7;
+  pointer-events: none;
+  animation: float 12s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-12px, 10px, 0) scale(1.03);
+  }
 }
