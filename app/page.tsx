@@ -270,7 +270,7 @@ export default function Home() {
             <div className="relative h-40 w-40 shrink-0">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/30 via-purple-400/30 to-emerald-400/30 blur-2xl" />
               <Image
-                src="/profile.jpeg"
+                src="/profile.jpg.jpeg"
                 alt="IRATUZI Benie Giramata smiling"
                 fill
                 priority
