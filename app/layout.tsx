@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Iratuzi Benie Giramata | Portfolio",
+  title: "Benie Giramata | Portfolio",
   description:
     "Profile and portfolio for Iratuzi Benie Giramata, a student developer specializing in frontend, backend, embedded systems, and AI.",
+  icons: {
+    icon: "/ib-icon.svg",
+  },
 };
 
 export default function RootLayout({

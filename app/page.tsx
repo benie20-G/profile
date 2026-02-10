@@ -281,7 +281,7 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-3">
                 <span className="tag flex items-center gap-2">
                   <SparkleIcon />
-                  Student Developer
+                  Software Developer
                 </span>
                 <span className="tag flex items-center gap-2">
                   <StarIcon />
